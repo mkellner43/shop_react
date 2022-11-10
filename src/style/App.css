@@ -200,7 +200,10 @@ body {
   top: 70px;
   padding: 1.5rem;
   border-radius: 1rem;
-  animation: fadeIn 3.2s;
+  animation-name: fadeIn;
+  animation-direction: alternate;
+  animation-duration: 1.8s;
+  animation-iteration-count: 2;
 }
 .notification > p {
   display: flex;
@@ -208,8 +211,6 @@ body {
 }
 
 @keyframes fadeIn {
-  0% {left: -300px;}
-  25% {left: 72.5px;}
-  50% {left: 72.5px;}
-  100% {left: -300px;}
+  from {left: -300px}
+  to {left: 72.5px}
 }

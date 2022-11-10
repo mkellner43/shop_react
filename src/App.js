@@ -28,7 +28,7 @@ const App = () => {
   useEffect(() => {
     const notify = setTimeout(()=> {
       setNotification(false)
-    }, 3000)
+    }, 3500)
 
     return () => clearTimeout(notify)
 
