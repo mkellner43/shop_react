@@ -14,13 +14,17 @@ const App = () => {
 
   const updateCart = (amount, id) => {
     const item = storeItems.find(item => item.id === id)
-    setCart(prevCart => [...prevCart, {item, amount}])
+    setCart(prevCart => {
+      localStorage.setItem('cart', JSON.stringify([...prevCart, {item, amount}]))
+      return [...prevCart, {item, amount}]
+    })
     setNotification(true)
   }
 
   const deleteFromCart = (itemToDelete) => {
     setCart(prevCart => {
       const newCart = prevCart.filter(item => item !== itemToDelete)
+      localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
     })
   }
@@ -34,6 +38,12 @@ const App = () => {
 
   }, [cart])
 
+  useEffect(() => {
+    const getCart = JSON.parse(localStorage.getItem('cart'))
+    if(getCart) {
+      setCart(getCart)
+    }
+  }, [])
     
   return (
     <section className="main">
