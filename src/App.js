@@ -47,7 +47,7 @@ const App = () => {
     
   return (
     <section className="main">
-      <BrowserRouter>
+      <BrowserRouter basename="mkellner43.github.io/shop_react/">
       <Nav />
       <CartNotication cart={cart} notification={notification}/>
       <Cart cart={cart} deleteFromCart={deleteFromCart} />
