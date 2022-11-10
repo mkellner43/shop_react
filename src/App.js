@@ -58,7 +58,6 @@ const App = () => {
             <Shop 
               cart={cart}
               updateCart={updateCart}
-              // deleteFromCart={deleteFromCart}
             />} 
           />
           <Route path="/about-us" element={<AboutUs cart={cart}/>} />
@@ -70,5 +69,3 @@ const App = () => {
 };
 
 export default App;
-
-//update style, change select to a increment and decrement, look into testing(if you want), try to get hooked up with local storage at a minimum, get running to deploy to pages.
