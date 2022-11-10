@@ -1,34 +1,62 @@
-import './style/App.css';
-import StaticCard from './components/StaticCard';
-import Img1 from './images/icon-18.svg'
-import Img2 from './images/icon-14.svg'
-import Img3 from './images/icon-10.svg'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import Nav from "./components/Nav";
+import Home from "./Home";
+import Shop from "./components/Shop";
+import AboutUs from "./components/AboutUs";
+import storeItems from "./data";
+import Cart from "./components/Cart";
+import CartNotication from "./components/CartNotification";
 
 const App = () => {
+  const [cart, setCart] = useState([])
+  const [notification, setNotification] = useState(false)
+
+  const updateCart = (amount, id) => {
+    const item = storeItems.find(item => item.id === id)
+    setCart(prevCart => [...prevCart, {item, amount}])
+    setNotification(true)
+  }
+
+  const deleteFromCart = (itemToDelete) => {
+    setCart(prevCart => {
+      const newCart = prevCart.filter(item => item !== itemToDelete)
+      return newCart
+    })
+  }
+
+  useEffect(() => {
+    const notify = setTimeout(()=> {
+      setNotification(false)
+    }, 3000)
+
+    return () => clearTimeout(notify)
+
+  }, [cart])
+
+    
   return (
-    <div className="App">
-      <h1 className='home-title'>Welcome to our Store!</h1>
-      <StaticCard 
-        title="We've got all kinds of stuff that makes cool sounds!"
-        content="Like the enchanting, whimsical xylophone.
-        Sure to drive your roommates crazy."
-        img={Img1}
-      />
-      <StaticCard 
-        title="Producers, we've got you covered!"
-        content='We have a huge stock of mixers on sale!
-        Be the next Dr. Dre of Rock Sandwich.'
-        img={Img2}
-      />
-      <StaticCard 
-        title='The Harpist Zone'
-        content='We can tune and string your harp, too!
-        Harp Shredders have a home here.
-        Keep ripping it up, you angel!'
-        img={Img3}
-      />
-    </div>
+    <section className="main">
+      <BrowserRouter>
+      <Nav />
+      <CartNotication cart={cart} notification={notification}/>
+      <Cart cart={cart} deleteFromCart={deleteFromCart} />
+        <Routes>
+          <Route path="/" element={<Home cart={cart}/>} />
+          <Route path="/shop" 
+            element={
+            <Shop 
+              cart={cart}
+              updateCart={updateCart}
+              // deleteFromCart={deleteFromCart}
+            />} 
+          />
+          <Route path="/about-us" element={<AboutUs cart={cart}/>} />
+        </Routes>
+      </BrowserRouter>
+    </section>
+
   );
-}
+};
 
 export default App;
