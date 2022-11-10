@@ -6,8 +6,14 @@
 }
 body {
   background-color: #c3c3c3;
+  width: 100%;
 }
-
+.App,
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -15,8 +21,8 @@ body {
   margin-bottom: 1rem;
   background-color: #68e1fd;
   color: white;
-  min-height: 60px;  
-  max-height: 60px;
+  min-height: 100px;  
+  height: 100px;
   overflow: hidden;
 }
 
@@ -67,10 +73,9 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-  padding: 0rem 30rem 0rem 30rem;
-}
-.home-card > div {
-  width: 500px;
+  padding: 1rem;
+  min-width: 700px;
+  max-width: 700px;
 }
 .home-card--title {
   font-weight: 600;
@@ -94,8 +99,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
-  border: 2px solid #68e1fd;
+  justify-content: space-between;
+  min-width: 250px;
+  width: 250px;
+  height: 400px;
   background-color: azure;
   border-radius: 1rem;
   margin: 1rem;
@@ -105,15 +112,34 @@ body {
   width: 100px;
 }
 .card--btns {
-  width: 100%;
+  width: 80%;
 }
 .card--btns > form {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.card--btns > form > select {
+.card--btns > form > input,
+.card--btns > form > button {
   text-align: center;
+  padding: 0.40rem;
+  border-radius: 0.5rem;
+}
+.card--btns > form > input {
+  text-align: center;
+  width: 50px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.card--btns > form > button {
+  color: white;
+  background-color: #68e1fd;
+  border: none;
+}
+.card--btns > form > button:hover {
+  background-color: white;
+  color: #68e1fd;
+  border: 1px solid #68e1fd;
 }
 .cart {
   display: flex;
@@ -123,14 +149,14 @@ body {
   background-color: azure;
   position: absolute;
   left: 0;
-  top: 60px;
+  top: 100px;
   overflow: hidden;
   padding-top: 1rem;
 }
 .cart-icon {
   position: absolute;
   left: 5px;
-  top: 90px;
+  top: 130px;
 }
 .close-cart {
   position: relative;
@@ -194,10 +220,10 @@ body {
   display: flex;
   justify-content: space-evenly;
   position: absolute;
-  background-color: rgb(67, 218, 67);
+  background-color: #68e1fd;
   color: white;
   left: -300px;
-  top: 70px;
+  top: 100px;
   padding: 1.5rem;
   border-radius: 1rem;
   animation-name: fadeIn;
@@ -212,5 +238,102 @@ body {
 
 @keyframes fadeIn {
   from {left: -300px}
-  to {left: 72.5px}
+  to {left: 60px}
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #68e1fd;
+    color: white;
+    min-height: 100px;  
+    height: 100px;
+    overflow: hidden;
+    min-width: 100%vw;
+  }
+  .nav-bar--title {
+    display: none;
+  }
+  .nav-bar > section > a {
+    text-decoration: none;
+    color: white;
+    padding: 0rem 1rem;
+    font-size: 15px;
+  }
+  .nav-bar--right > a:hover {
+    background-color: white;
+    color: #68e1fd;
+    border: 2px solid #68e1fd;
+    border-radius: 1rem;
+  }
+  .nav-bar--right > a {
+    position: relative;
+    right: 30px;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .home-title,
+  .about-us--title,
+  .shop--title {
+    font-size: 30px;
+    font-weight: 500;
+  }
+.home-card {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.home-card > div {
+  width: 200px;
+}
+.home-card--title {
+  font-weight: 600;
+}
+.home-card--img {
+  width: 100px;
+  height: 100px;
+  padding: 1rem;
+  border: 2px solid rgb(78, 72, 72);
+  border-radius: 1rem;
+}
+.cart {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border: 4px solid #68e1fd;
+  background-color: azure;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  overflow: hidden;
+  padding-top: 1rem;
+}
+.cart-icon {
+  position: absolute;
+  left: 5px;
+  top: 130px;
+}
+.notification {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  background-color: #68e1fd;
+  color: white;
+  left: -300px;
+  top: 90px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  animation-name: fadeIn;
+  animation-direction: alternate;
+  animation-duration: 1.8s;
+  animation-iteration-count: 2;
+}
 }

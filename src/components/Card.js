@@ -28,14 +28,7 @@ const Card = ({id, img, title, price, description, updateCart}) => {
       <p>{description}</p>
       <div className="card--btns">
         <form onSubmit={handleSubmit} value={value}>
-          <select onChange={handleChange} value={value}>
-            <option value="0">Choose Amount</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+          <input type="number" min='0' max='10' value={value} onChange={handleChange}/>
           <button>Add to Cart</button>
         </form>
       </div>
