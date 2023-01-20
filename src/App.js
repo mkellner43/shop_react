@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Nav from "./components/Nav";
 import Home from "./Home";
@@ -47,13 +47,13 @@ const App = () => {
     
   return (
     <section className="main">
-      <BrowserRouter basename="mkellner43.github.io/shop_react/">
+      <HashRouter basename="/">
       <Nav />
       <CartNotication cart={cart} notification={notification}/>
       <Cart cart={cart} deleteFromCart={deleteFromCart} />
-        <Routes>
+        <Routes >
           <Route path="/" element={<Home cart={cart}/>} />
-          <Route path="/shop" 
+          <Route  path="/shop" 
             element={
             <Shop 
               cart={cart}
@@ -62,7 +62,7 @@ const App = () => {
           />
           <Route path="/about-us" element={<AboutUs cart={cart}/>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </section>
 
   );
