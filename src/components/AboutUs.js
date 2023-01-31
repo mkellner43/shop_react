@@ -2,10 +2,11 @@ import StaticCard from "./StaticCard";
 import Icon from '../images/pexels-eric-esma-894156.jpg';
 import Icon2 from '../images/pexels-ekrulila-4491532.jpg';
 import Icon3 from '../images/pexels-rodnae-productions-8231185.jpg';
+import { motion } from 'framer-motion';
 
 const AboutUs = () => {
   return (
-    <section className="about-us">
+    <motion.section animate={{opacity: [0, 1]}} className="about-us">
       <h1 className="about-us--title">Our Story</h1>
       <StaticCard 
         title="We care about great musicians."
@@ -27,7 +28,7 @@ const AboutUs = () => {
       music shop in town. Yes! Top ten, baby!"
       img={Icon2}
       />
-    </section>
+    </motion.section>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus, faCircleMinus } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 import './Card.scss'
 
 const Card = ({id, img, title, price, description, updateCart}) => {
@@ -48,15 +49,29 @@ const Card = ({id, img, title, price, description, updateCart}) => {
       <div className="card--btns">
         <form onSubmit={handleSubmit} value={value}>
           <div className='number-change'>
-          <div className='plus' onClick={handleChangeDown}>
+          <motion.div 
+            whileTap={{scale: 0.9}} 
+            whileHover={{scale: 1.05}}
+            className='plus'
+            onClick={handleChangeDown}>
             <FontAwesomeIcon icon={faCircleMinus} className="fa-lg"/>
-          </div>
+          </motion.div>
           <input type="number" value={value} readOnly={true}/>
-          <div className='minus' onClick={handleChangeUp}>
+          <motion.div 
+            whileTap={{scale: 0.9}} 
+            whileHover={{scale: 1.05}}
+            className='minus' 
+            onClick={handleChangeUp}
+          >
             <FontAwesomeIcon icon={faCirclePlus} className="fa-lg"/>
+          </motion.div>
           </div>
-          </div>
-          <button>Add to Cart</button>
+          <motion.button
+            whileTap={{scale: 0.9}} 
+            whileHover={{scale: 1.05}}
+          >
+            Add to Cart
+          </motion.button>
         </form>
       </div>
     </div>

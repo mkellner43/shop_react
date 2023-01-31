@@ -1,5 +1,7 @@
 import Card from '../Card';
 import storeItems from '../../data';
+import { motion } from 'framer-motion';
+
 import './style.scss';
 
 const Shop = ({updateCart}) => {
@@ -16,11 +18,11 @@ const Shop = ({updateCart}) => {
     />)
   }
   return (
-    <section className="shop">
+    <motion.section animate={{opacity: [0, 1]}} className="shop">
       <div className='shop--cards'>
         {generateCards()}
       </div>
-    </section>
+    </motion.section>
   )
 }
 
