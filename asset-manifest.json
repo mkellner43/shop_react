@@ -1,27 +1,26 @@
 {
   "files": {
-    "main.css": "/shop_react/static/css/main.6c0e6a4a.css",
-    "main.js": "/shop_react/static/js/main.21b6dfed.js",
-    "static/media/store_icon.png": "/shop_react/static/media/store_icon.7795410622e54ec0e2dc.png",
-    "static/media/icon-14.svg": "/shop_react/static/media/icon-14.de58376bdeb2c527c45d9b1775b33392.svg",
-    "static/media/icon-2.svg": "/shop_react/static/media/icon-2.0343b7e94786252e14fac2c42bd527d6.svg",
-    "static/media/icon-29.svg": "/shop_react/static/media/icon-29.73aa0ff9832c2fdd27a67393aaf3f8a0.svg",
-    "static/media/icon-18.svg": "/shop_react/static/media/icon-18.34483a94cb168b856fadd9b5dc900fd0.svg",
-    "static/media/icon-7.svg": "/shop_react/static/media/icon-7.bd866b2361773ea1d4819ee0cbec8272.svg",
-    "static/media/icon-0.svg": "/shop_react/static/media/icon-0.29b61c8e5b2bbbc138b7e2b1298f19ad.svg",
-    "static/media/icon-11.svg": "/shop_react/static/media/icon-11.9ab9d5fbe4739c54d61deee1602e2b7e.svg",
-    "static/media/icon-10.svg": "/shop_react/static/media/icon-10.f2812b613692304ad984377eb6a160c5.svg",
-    "static/media/icon-5.svg": "/shop_react/static/media/icon-5.002ac598b2f7babb2eacade9fdbed60d.svg",
-    "static/media/icon-4.svg": "/shop_react/static/media/icon-4.54980329423ef343cb8c5bceefe8ab13.svg",
-    "static/media/icon-1.svg": "/shop_react/static/media/icon-1.78e9e0bf2af445fdfb6e6424901d2c45.svg",
-    "static/media/icon-13.svg": "/shop_react/static/media/icon-13.b79c200f14cc2c1b24df7adf98ceb698.svg",
-    "static/media/icon-6.svg": "/shop_react/static/media/icon-6.947697e3c27ee5ed87b630ed4cd79e0d.svg",
+    "main.css": "/shop_react/static/css/main.34e5d1a1.css",
+    "main.js": "/shop_react/static/js/main.a42e9149.js",
+    "static/media/pexels-pixabay-164936.jpg": "/shop_react/static/media/pexels-pixabay-164936.09839ef6ed0657f425f6.jpg",
+    "static/media/pexels-graham-finney-13385799.jpg": "/shop_react/static/media/pexels-graham-finney-13385799.a03cea1491e8944cfbcb.jpg",
+    "static/media/pexels-roman-odintsov-6332012.jpg": "/shop_react/static/media/pexels-roman-odintsov-6332012.6e4bb65ae14339a77d89.jpg",
+    "static/media/pexels-tiểu-bảo-trương-8949646.jpg": "/shop_react/static/media/pexels-tiểu-bảo-trương-8949646.39dd30151a97fe574da6.jpg",
+    "static/media/pexels-wallace-chuck-3587478.jpg": "/shop_react/static/media/pexels-wallace-chuck-3587478.ab7c155237cfdd3ad30d.jpg",
+    "static/media/pexels-ekrulila-4491532.jpg": "/shop_react/static/media/pexels-ekrulila-4491532.2fc8a69b9bf320954a10.jpg",
+    "static/media/pexels-esma-i̇mamoğlu-9745998.jpg": "/shop_react/static/media/pexels-esma-i̇mamoğlu-9745998.383d3766eb1129017917.jpg",
+    "static/media/pexels-eric-esma-894156.jpg": "/shop_react/static/media/pexels-eric-esma-894156.9c1ab66314f62126ef4e.jpg",
+    "static/media/pexels-gilmer-diaz-estela-4809711.jpg": "/shop_react/static/media/pexels-gilmer-diaz-estela-4809711.66b182b20ae206b9e5bc.jpg",
+    "static/media/pexels-kelvin-frança-3714523.jpg": "/shop_react/static/media/pexels-kelvin-frança-3714523.9458c6c6dac3f9c9c9a0.jpg",
+    "static/media/pexels-rodnae-productions-8231185.jpg": "/shop_react/static/media/pexels-rodnae-productions-8231185.7f1306dc84f724b7216e.jpg",
+    "static/media/pexels-hendrik-b-744318.jpg": "/shop_react/static/media/pexels-hendrik-b-744318.3820422a88ce2ad045a3.jpg",
+    "static/media/pexels-vishnu-r-nair-1105666.jpg": "/shop_react/static/media/pexels-vishnu-r-nair-1105666.3306ad0bfe5994d00777.jpg",
     "index.html": "/shop_react/index.html",
-    "main.6c0e6a4a.css.map": "/shop_react/static/css/main.6c0e6a4a.css.map",
-    "main.21b6dfed.js.map": "/shop_react/static/js/main.21b6dfed.js.map"
+    "main.34e5d1a1.css.map": "/shop_react/static/css/main.34e5d1a1.css.map",
+    "main.a42e9149.js.map": "/shop_react/static/js/main.a42e9149.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c0e6a4a.css",
-    "static/js/main.21b6dfed.js"
+    "static/css/main.34e5d1a1.css",
+    "static/js/main.a42e9149.js"
   ]
 }
