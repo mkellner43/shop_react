@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/shop_react/static/css/main.34e5d1a1.css",
-    "main.js": "/shop_react/static/js/main.a42e9149.js",
+    "main.js": "/shop_react/static/js/main.c3953fbc.js",
     "static/media/pexels-pixabay-164936.jpg": "/shop_react/static/media/pexels-pixabay-164936.09839ef6ed0657f425f6.jpg",
     "static/media/pexels-graham-finney-13385799.jpg": "/shop_react/static/media/pexels-graham-finney-13385799.a03cea1491e8944cfbcb.jpg",
     "static/media/pexels-roman-odintsov-6332012.jpg": "/shop_react/static/media/pexels-roman-odintsov-6332012.6e4bb65ae14339a77d89.jpg",
-    "static/media/pexels-tiểu-bảo-trương-8949646.jpg": "/shop_react/static/media/pexels-tiểu-bảo-trương-8949646.39dd30151a97fe574da6.jpg",
+    "static/media/banjo.jpg": "/shop_react/static/media/banjo.39dd30151a97fe574da6.jpg",
     "static/media/pexels-wallace-chuck-3587478.jpg": "/shop_react/static/media/pexels-wallace-chuck-3587478.ab7c155237cfdd3ad30d.jpg",
     "static/media/pexels-ekrulila-4491532.jpg": "/shop_react/static/media/pexels-ekrulila-4491532.2fc8a69b9bf320954a10.jpg",
     "static/media/pexels-esma-i̇mamoğlu-9745998.jpg": "/shop_react/static/media/pexels-esma-i̇mamoğlu-9745998.383d3766eb1129017917.jpg",
@@ -17,10 +17,10 @@
     "static/media/pexels-vishnu-r-nair-1105666.jpg": "/shop_react/static/media/pexels-vishnu-r-nair-1105666.3306ad0bfe5994d00777.jpg",
     "index.html": "/shop_react/index.html",
     "main.34e5d1a1.css.map": "/shop_react/static/css/main.34e5d1a1.css.map",
-    "main.a42e9149.js.map": "/shop_react/static/js/main.a42e9149.js.map"
+    "main.c3953fbc.js.map": "/shop_react/static/js/main.c3953fbc.js.map"
   },
   "entrypoints": [
     "static/css/main.34e5d1a1.css",
-    "static/js/main.a42e9149.js"
+    "static/js/main.c3953fbc.js"
   ]
 }
