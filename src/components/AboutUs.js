@@ -1,7 +1,7 @@
 import StaticCard from "./StaticCard";
-import Icon from '../images/icon-11.svg'
-import Icon2 from '../images/icon-13.svg'
-import Icon3 from '../images/icon-29.svg'
+import Icon from '../images/pexels-eric-esma-894156.jpg';
+import Icon2 from '../images/pexels-ekrulila-4491532.jpg';
+import Icon3 from '../images/pexels-rodnae-productions-8231185.jpg';
 
 const AboutUs = () => {
   return (
@@ -18,6 +18,7 @@ const AboutUs = () => {
       content="We built a hookah lounge on the roof!
       We're all fans of the Rock Sandwich Cassowaries."
       img={Icon3}
+      reverse={true}
       />
       <StaticCard 
       title="We only eat avocados."

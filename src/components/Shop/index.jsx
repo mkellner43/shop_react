@@ -1,5 +1,6 @@
-import Card from './Card';
-import storeItems from '../data';
+import Card from '../Card';
+import storeItems from '../../data';
+import './style.scss';
 
 const Shop = ({updateCart}) => {
   const generateCards = () => {
@@ -16,7 +17,6 @@ const Shop = ({updateCart}) => {
   }
   return (
     <section className="shop">
-      <h1 className="shop--title">Shop</h1>
       <div className='shop--cards'>
         {generateCards()}
       </div>

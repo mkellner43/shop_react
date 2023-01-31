@@ -1,8 +1,7 @@
-import './style/App.css';
 import StaticCard from './components/StaticCard';
-import Img1 from './images/icon-18.svg'
-import Img2 from './images/icon-14.svg'
-import Img3 from './images/icon-10.svg'
+import Img1 from './images/pexels-vishnu-r-nair-1105666.jpg';
+import Img2 from './images/pexels-hendrik-b-744318.jpg';
+import Img3 from './images/pexels-wallace-chuck-3587478.jpg';
 
 const Home = () => {
   return (
@@ -19,6 +18,7 @@ const Home = () => {
         content='We have a huge stock of mixers on sale!
         Be the next Dr. Dre of Rock Sandwich.'
         img={Img2}
+        reverse={true}
       />
       <StaticCard 
         title='The Harpist Zone'

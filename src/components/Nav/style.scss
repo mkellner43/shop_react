@@ -1,0 +1,27 @@
+@use '../../style/utilities/variables' as v;
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background-color: v.$secondary-color;
+  max-height: 100px;
+  box-shadow: 0 0 8px;
+  a {
+    img {
+      max-width: 100px;
+    }
+  }
+
+  .nav-bar--left,
+  .nav-bar--right {
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color:  white;
+      padding: 1rem;
+    }
+  }
+}

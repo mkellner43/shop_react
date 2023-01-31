@@ -5,14 +5,16 @@ import Home from "./Home";
 import Shop from "./components/Shop";
 import AboutUs from "./components/AboutUs";
 import storeItems from "./data";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/Cart";
 import CartNotication from "./components/CartNotification";
+import './style/App.scss';
 
 const App = () => {
   const [cart, setCart] = useState([])
   const [notification, setNotification] = useState(false)
 
   const updateCart = (amount, id) => {
+    if(amount <= 0) return null
     const item = storeItems.find(item => item.id === id)
     setCart(prevCart => {
       localStorage.setItem('cart', JSON.stringify([...prevCart, {item, amount}]))

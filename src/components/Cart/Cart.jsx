@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './style.scss';
 
 const Cart = ({cart, deleteFromCart}) => {
   const [display, setDisplay] = useState(false)
@@ -13,8 +14,8 @@ const Cart = ({cart, deleteFromCart}) => {
       return (
         <div className="cart-item" key={`${cartItem.item.id}${i}`}>
           <p>{cartItem.amount}</p>
+          <img src={cartItem.item.image} alt={cartItem.item.name}/>
           <div>
-            <img src={cartItem.item.image} alt={cartItem.item.name}></img>
             <p>{cartItem.item.name}</p>
             <p>{cartItem.item.price}</p>
           </div>
@@ -30,11 +31,10 @@ const Cart = ({cart, deleteFromCart}) => {
     setCartNumber(() => 
       modCart.length > 0 ? modCart.map(item => Number(item.amount)).reduce(
         (prev, current) => prev + current
-      )
-      :
-      0
+      ) : 0
     )
   }, [cart])
+  
   return (
     display ? 
     <section className="cart">
