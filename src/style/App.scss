@@ -19,6 +19,13 @@ body {
   margin-top: 5rem;
 }
 
+.background-image {
+  position: absolute;
+  top: -50vh;
+  width: 100%;
+  max-width: 4000px;
+}
+
 .home-title,
 .about-us--title,
 .shop--title {
