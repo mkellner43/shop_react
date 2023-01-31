@@ -15,10 +15,6 @@
     min-width: 100px;
   }
 }
-.home-card--title {
-  font-size: 1.25rem;
-  font-weight: 200;
-}
 .home-card--img {
   width: auto;
   max-width: 400px;
@@ -32,6 +28,7 @@
   text-align: justify;
   max-width: 75%;
   font-weight: 200;
+  font-size: 1.25rem;
 }
 
 .card {
@@ -64,6 +61,7 @@
   img {
     width: 100%;
     border-radius: 0.25rem;
+    box-shadow: 0 0 8px 0 black;
   }
 }
 form {

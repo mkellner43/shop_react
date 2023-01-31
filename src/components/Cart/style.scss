@@ -11,7 +11,7 @@
   left: 0;
   top: 57px;
   overflow: scroll;
-  z-index: 100;
+  z-index: 99;
 
   .cart-items{
     display: flex;
@@ -54,14 +54,10 @@
 
   button {
     height: 2rem;
-    border: 2px solid v.$primary-color;
+    border: none;
     background-color: v.$secondary-color;
     color: v.$primary-color;
-    &:hover {
-      background-color: v.$primary-color;
-      color: v.$secondary-color;
-      border: 2px solid v.$secondary-color;
-    }
+    margin: 0.5rem;
   }
 
   p {

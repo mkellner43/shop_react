@@ -6,15 +6,13 @@ const StaticCard = ({title, content, img, reverse=false}) => {
         <section className='home-card'>
         <img className='home-card--img' src={img} alt='icon'></img>
         <div>
-        <p className='home-card--title'>{title}</p>
-        <p className='home-card-content'>{content}</p>
+        <p className='home-card-content'>{title} {content}</p>
         </div>
         </section>
       :
         <section className='home-card'>
         <div>
-        <p className='home-card--title'>{title}</p>
-        <p className='home-card-content'>{content}</p>
+        <p className='home-card-content'>{title} {content}</p>
         </div>
         <img className='home-card--img' src={img} alt='icon'></img>
         </section>

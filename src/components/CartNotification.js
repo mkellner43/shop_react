@@ -13,7 +13,7 @@ const CartNotication = ({cart, notification}) => {
       exit={{y: -200, opacity: 0, transition: {duration: 1}}}
       >
         <p>
-          {getItem.amount} {getItem.item.name}{getItem.amount > 1 ? "'s" : null} added to cart!
+          {getItem?.amount} {getItem?.item.name}{getItem?.amount > 1 ? "'s" : null} added to cart!
         </p>
       </motion.div>
     :
