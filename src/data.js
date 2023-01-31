@@ -35,7 +35,7 @@ const storeItems = [
     name: 'Banjo',
     price: 199.99,
     description: "Assert dominance over the local alligators.",
-    image: require('./images/pexels-tiểu-bảo-trương-8949646.jpg')
+    image: require('./images/banjo.jpg')
   },
   { id: uniqid(),
     name: 'Pan Flute',
