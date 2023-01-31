@@ -1,12 +1,16 @@
 @use '../../style/utilities/variables' as v;
 
 .nav-bar {
+  position: fixed;
+  top: 0;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   padding: 0 2rem;
   background-color: v.$secondary-color;
   max-height: 100px;
   box-shadow: 0 0 8px;
+  z-index: 100;
   a {
     img {
       max-width: 100px;
