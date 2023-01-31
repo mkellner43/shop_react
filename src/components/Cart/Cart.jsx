@@ -23,7 +23,7 @@ const Cart = ({cart, deleteFromCart}) => {
         </div>
       )
     })
-    return cartItems
+    return <div className="cart-items">{cartItems}</div>
   }
 
   useEffect(() => {
