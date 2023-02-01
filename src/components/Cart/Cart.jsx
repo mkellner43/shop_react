@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './style.scss';
-import { motion, AnimatePresence, easeInOut } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Cart = ({cart, deleteFromCart}) => {
   const [display, setDisplay] = useState(false)
