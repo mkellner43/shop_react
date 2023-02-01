@@ -11,7 +11,7 @@ const Menu = ({isOpen, setIsOpen}) => {
         <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
         { isOpen &&
         <motion.div 
-          animate={{y: [-200, 60]}}
+          animate={{y: [-200, 0]}}
           className='nav-links'>
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
