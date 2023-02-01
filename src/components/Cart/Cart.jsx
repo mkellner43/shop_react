@@ -116,7 +116,7 @@ const Cart = ({cart, deleteFromCart}) => {
         exit='exit'
         whileTap={{scale: 0.9}}
         whileHover={{scale: 1.05}} 
-        className="fa-solid fa-cart-shopping fa-xl cart-icon"
+        className="fa-solid fa-cart-shopping cart-icon"
         onClick={handleClick}
         >
           <p className="cart--number">{ cartNumber }</p>

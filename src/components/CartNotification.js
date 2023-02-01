@@ -8,9 +8,9 @@ const CartNotication = ({cart, notification}) => {
 
     {notification ?
       <motion.div className='notification'
-      initial={{y: -200, opacity: 0}}
+      initial={{y: -100, opacity: 0}}
       animate={{y: 0, opacity: 1, transition: {duration: 1}}}
-      exit={{y: -200, opacity: 0, transition: {duration: 1}}}
+      exit={{y: -100, opacity: 0, transition: {duration: 1}}}
       >
         <p>
           {getItem?.amount} {getItem?.item.name}{getItem?.amount > 1 ? "'s" : null} added to cart!

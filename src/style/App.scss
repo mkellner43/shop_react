@@ -43,7 +43,9 @@ body {
   padding: 1.5rem;
   border-radius: 1rem;
   width: 250px;
-  left: 50px;
+  left: 80px;
+  top: 65px;
+  z-index: 999;
   p {
     display: flex;
     justify-content: space-between;

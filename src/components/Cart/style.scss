@@ -71,17 +71,25 @@
 
 .cart-icon {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: 5px;
   top: 80px;
   color: v.$secondary-color;
+  background-color: rgba(255, 255, 255, 0.253);
+  height: 70px;
+  width: 70px;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 100%;
 
   .cart--number {
     display: flex;
     align-items: center;
     position: relative;
     font-size: 10px;
-    left: 22px;
-    top: 8px;
+    top: 15px;
     color: v.$primary-color;
     padding: 0.3rem;
     border-radius: 1rem;
