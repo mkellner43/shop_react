@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/shop_react/static/css/main.34e5d1a1.css",
-    "main.js": "/shop_react/static/js/main.724ba987.js",
+    "main.css": "/shop_react/static/css/main.2cbc05ad.css",
+    "main.js": "/shop_react/static/js/main.c6bd4b21.js",
+    "static/media/pexels-thibault-trillet-167491.jpg": "/shop_react/static/media/pexels-thibault-trillet-167491.ad7457873609b87abfc5.jpg",
     "static/media/pexels-pixabay-164936.jpg": "/shop_react/static/media/pexels-pixabay-164936.09839ef6ed0657f425f6.jpg",
     "static/media/pexels-graham-finney-13385799.jpg": "/shop_react/static/media/pexels-graham-finney-13385799.a03cea1491e8944cfbcb.jpg",
     "static/media/pexels-roman-odintsov-6332012.jpg": "/shop_react/static/media/pexels-roman-odintsov-6332012.6e4bb65ae14339a77d89.jpg",
@@ -16,11 +17,11 @@
     "static/media/pexels-hendrik-b-744318.jpg": "/shop_react/static/media/pexels-hendrik-b-744318.3820422a88ce2ad045a3.jpg",
     "static/media/pexels-vishnu-r-nair-1105666.jpg": "/shop_react/static/media/pexels-vishnu-r-nair-1105666.3306ad0bfe5994d00777.jpg",
     "index.html": "/shop_react/index.html",
-    "main.34e5d1a1.css.map": "/shop_react/static/css/main.34e5d1a1.css.map",
-    "main.724ba987.js.map": "/shop_react/static/js/main.724ba987.js.map"
+    "main.2cbc05ad.css.map": "/shop_react/static/css/main.2cbc05ad.css.map",
+    "main.c6bd4b21.js.map": "/shop_react/static/js/main.c6bd4b21.js.map"
   },
   "entrypoints": [
-    "static/css/main.34e5d1a1.css",
-    "static/js/main.724ba987.js"
+    "static/css/main.2cbc05ad.css",
+    "static/js/main.c6bd4b21.js"
   ]
 }
