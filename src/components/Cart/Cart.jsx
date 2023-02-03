@@ -5,6 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const Cart = ({cart, deleteFromCart}) => {
   const [display, setDisplay] = useState(false)
   const [cartNumber, setCartNumber] = useState(0)
+  const cartUI = useRef(null)
+  const cartIcon = useRef(null)
+  const closeCart = useRef(null)
+
   const variant = {
     initial: {
       y: -500
@@ -81,31 +85,24 @@ const Cart = ({cart, deleteFromCart}) => {
       >
         {cartItems}
       </motion.div>
-
   }
 
   useEffect(() => {
-    let modCart = cart
-    setCartNumber(() => 
-      modCart.length > 0 ? modCart.map(item => Number(item.amount)).reduce(
-        (prev, current) => prev + current
-      ) : 0
-    )
+    setCartNumber(cart.length > 0 ? 
+      cart.map(item => Number(item.amount))
+      .reduce((prev, current) => prev + current): 0 )
   }, [cart])
 
-  const cartUI = useRef(null)
-  const cartIcon = useRef(null)
-  const closeCart = useRef(null)
-
   useEffect(() => {
-    window.addEventListener('click', ev => {
-      if((cartUI.current && cartUI.current.contains(ev.target)) ||
-         (cartIcon.current && cartIcon.current.contains(ev.target)) ||
-         ev.target.className === 'fa-solid fa-xmark delete-cart-item'
-      ) return
-      else {setDisplay(false)}
-    })
-  })
+    const hideCart = e => {
+      if((cartIcon.current && cartIcon.current.contains(e.target)) ||
+         e.target.className === 'fa-solid fa-xmark delete-cart-item') return
+      if((cartUI.current && !cartUI.current.contains(e.target)) ||
+         e.target === closeCart) return setDisplay(false);
+    }
+    document.addEventListener('click', hideCart)
+    return () => document.removeEventListener('click', hideCart)
+  }, [])
 
   return (
     <>

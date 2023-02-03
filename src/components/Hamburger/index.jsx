@@ -6,12 +6,12 @@ const Hamburger = ({isOpen, setIsOpen}) => {
   const ham = useRef(null)
 
   useEffect(() => {
-    window.addEventListener('click', ev => {
-      // console.log(nav.current.contains(ev.target))
-      if(ham?.current.contains(ev.target)) {setIsOpen(!isOpen)}
-      else {setIsOpen(false)}
-    })
-  })
+    const closeNav = e => {
+      if(!ham.current.contains(e.target)) return setIsOpen(false)
+    }
+    document.body.addEventListener('click', closeNav)
+    return () => document.removeEventListener('click', closeNav)
+  }, [])
   
   const variant = isOpen ? 'opened' : 'closed';
   const top = {
@@ -66,7 +66,7 @@ const Hamburger = ({isOpen, setIsOpen}) => {
   };
 
   return (
-    <div className='hamburger-container' ref={ham}>
+    <div className='hamburger-container' style={{zIndex: '1000'}} ref={ham} onClick={() => setIsOpen(prevState => !prevState)} onBlur={() => setIsOpen(false)}>
     <motion.svg
       whileHover={{scale: 1.05}}
       whileTap={{scale: 0.90}}
@@ -75,6 +75,7 @@ const Hamburger = ({isOpen, setIsOpen}) => {
       preserveAspectRatio="none"
       width='60'
       height='60'
+      onBlur={() => setIsOpen(false)}
       >
       <div className='background'></div>
       <motion.line
@@ -84,6 +85,7 @@ const Hamburger = ({isOpen, setIsOpen}) => {
         y2="12.6"
         variants={top}
         {...lineProps}
+        onBlur={() => setIsOpen(false)}
         />
       <motion.line
         x1="10"
@@ -92,6 +94,7 @@ const Hamburger = ({isOpen, setIsOpen}) => {
         y2="22.6"
         variants={center}
         {...lineProps}
+        onBlur={() => setIsOpen(false)}
         />
       <motion.line
         x1="10"
@@ -100,6 +103,7 @@ const Hamburger = ({isOpen, setIsOpen}) => {
         y2="32.6"
         variants={bottom}
         {...lineProps}
+        onBlur={() => setIsOpen(false)}
         />
     </motion.svg>
     </div>
