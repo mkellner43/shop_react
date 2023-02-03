@@ -1,7 +1,18 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 import './Hamburger.scss'
 
 const Hamburger = ({isOpen, setIsOpen}) => {
+  const ham = useRef(null)
+
+  useEffect(() => {
+    window.addEventListener('click', ev => {
+      // console.log(nav.current.contains(ev.target))
+      if(ham?.current.contains(ev.target)) {setIsOpen(!isOpen)}
+      else {setIsOpen(false)}
+    })
+  })
+  
   const variant = isOpen ? 'opened' : 'closed';
   const top = {
     closed: {
@@ -55,10 +66,8 @@ const Hamburger = ({isOpen, setIsOpen}) => {
   };
 
   return (
-    <div className='hamburger-container'>
-
+    <div className='hamburger-container' ref={ham}>
     <motion.svg
-      onClick={() => setIsOpen(prevState => !prevState)} 
       whileHover={{scale: 1.05}}
       whileTap={{scale: 0.90}}
       viewBox='0 0 50 50'
